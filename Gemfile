@@ -101,3 +101,6 @@ gem 'ransack'
 
 #rspec
 gem 'rspec-rails'
+
+#logical delete
+gem 'acts_as_paranoid'

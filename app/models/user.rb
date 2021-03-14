@@ -1,6 +1,7 @@
 class User < ApplicationRecord
+  acts_as_paranoid
   has_secure_password
-  has_many :clock_events
+  has_many :clock_events, dependent: :destroy
 
   validates :username, presence: true
   validates :email, presence: true

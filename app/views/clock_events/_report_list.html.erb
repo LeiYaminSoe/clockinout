@@ -11,6 +11,8 @@
               <thead class="thead-light">
                 <tr>
                   <th scope="col">No:</th>
+                  <th scope="col">User Name</th>
+                  <th scope="col">Email</th>
                   <th scope="col">Event Type</th>
                   <th scope="col">Event Action</th>
                   <th scope="col">Event Time</th>
@@ -22,6 +24,8 @@
                 <% @clk_events.each_with_index do |clock_event,index| %>
                   <tr>
                     <th scope="row"><%= index+1 %></th>
+                    <td class="cus-col-big"><%= clock_event.user.username %></td>
+                    <td class="cus-col-big"><%= clock_event.user.email %></td>
                     <td class="cus-col-big">
                       <%= clock_event.event_type == 1 ? "School" : clock_event.event_type == 2 ? "Lunch" : clock_event.event_type == 3 ? "Personal" : "" %>
                     </td>
